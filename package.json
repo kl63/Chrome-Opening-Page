@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "firebase": "^10.8.0",
+    "next": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-rotating-text": "^1.4.1",
+    "sass": "^1.71.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
