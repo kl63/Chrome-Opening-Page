@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    // Focus on the input field when the component mounts
+    inputRef.current.focus();
+  }, []); // Empty dependency array to run only once after mounting
 
   const handleSearch = () => {
     // Perform the search using the searchQuery state
@@ -33,6 +39,8 @@ const SearchBar = () => {
         onChange={handleChange}
         onKeyPress={handleKeyPress}
         style={styles.input}
+        ref={inputRef}
+        autoFocus // Autofocus the input field
       />
       
     </div>
